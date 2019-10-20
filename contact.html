@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <!-- css -->
+    <link href="https://fonts.cat.net/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/flexslider.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+    <!-- start header -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top" style="position: relative">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">东盟小币种兑换平台</a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a class="waves-effect waves-dark" href="index.html">主页</a></li>
+                        <li class="dropdown ">
+                            <a href="about.html?t=0" data-toggle="dropdown"
+                               class="dropdown-toggle waves-effect waves-dark">关于我们<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="waves-effect waves-dark" href="about.html?t=0">平台简介</a></li>
+                                <li><a class="waves-effect waves-dark" href="about.html?t=1">我们的优势</a></li>
+                                <li><a class="waves-effect waves-dark" href="about.html?t=0">联系方式</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown ">
+                            <a href="news.html?t=0" data-toggle="dropdown"
+                               class="dropdown-toggle waves-effect waves-dark">资讯中心<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="waves-effect waves-dark" href="news.html?t=0">财经要闻</a></li>
+                                <li><a class="waves-effect waves-dark" href="news.html?t=1">外汇资讯</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="waves-effect waves-dark" href="law.html">政策法规</a></li>
+                        <li class="dropdown">
+                            <a href="exchange.html?t=0" data-toggle="dropdown"
+                               class="dropdown-toggle waves-effect waves-dark">兑换中心<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="waves-effect waves-dark" href="exchange.html?t=0">普通兑换</a></li>
+                                <li><a class="waves-effect waves-dark" href="exchange.html?t=1">会员中心</a></li>
+                            </ul>
+                        </li>
+                        <li class="active dropdown">
+                            <a href="contact.html?t=0" data-toggle="dropdown" class="dropdown-toggle waves-effect waves-dark">汇率数据<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="waves-effect waves-dark" href="contact.html?t=0">历史汇率</a></li>
+                                <li><a class="waves-effect waves-dark" href="contact.html?t=1">实时汇率</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div style="position: absolute;right: 20px;top: 20px">
+                <span style="padding-right: 20px"><a href="login.html">登录</a></span>
+                <span><a href="register.html">注册</a></span>
+            </div>
+        </div>
+    </header>
+    <section id="inner-headline">
+        <div class="img_detail">
+
+        </div>
+    </section>
+    <section id="content">
+        <section class="section-padding">
+            <div class="container">
+                <div class="row showcase-section">
+                    <div class="col-md-4">
+                        <div class="block-heading-two">
+                            <h3><span class="color_or">汇率数据</span></h3>
+                        </div>
+                        <!-- Accordion starts -->
+                        <div class="panel-group" id="accordion-alt3">
+                            <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
+                            <div class="panel " href="0">
+                                <!-- Panel heading -->
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-alt3">
+                                            <i class="fa fa-angle-right"></i> 历史汇率
+                                        </a>
+                                    </h4>
+                                </div>
+
+                            </div>
+                            <div class="panel" href="1">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-alt3">
+                                            <i class="fa fa-angle-right"></i>实时汇率
+                                        </a>
+                                    </h4>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- Accordion ends -->
+
+                    </div>
+                    <div class="col-md-8">
+                        <div class="right_content">
+
+                            <div class="right_h2" style="">历史汇率</div>
+                            <div class="right_text">
+                                <div class="clearfix" style="padding-bottom: 30px">
+                                    <div style="float: left;width: 100px;height: 35px;line-height: 35px">
+                                        币种（从）
+                                    </div>
+                                    <div style="float: left;width: 150px">
+                                        <select class="form-control" style="height: 35px;line-height: 35px" id="bz1"
+                                                disabled>
+                                            <option value="-1">人民币</option>
+                                            <option value="0">文莱林吉特</option>
+                                            <option value="1">越南盾</option>
+                                            <option value="2">老挝基普</option>
+                                            <option value="3">柬埔寨瑞尔</option>
+                                            <option value="4">泰铢</option>
+                                            <option value="5">缅元</option>
+                                            <option value="6">马来西亚林吉特</option>
+                                            <option value="7">菲律宾比索</option>
+                                            <option value="8">印尼卢比</option>
+                                            <option value="9">新加坡元</option>
+                                        </select>
+                                    </div>
+                                    <div style="float: left;width: 100px;height: 35px;line-height: 35px;text-align: center">
+                                        币种（到）
+                                    </div>
+                                    <div style="float: left;width: 150px">
+                                        <select class="form-control" style="height: 35px;line-height: 35px" id="bz2"
+                                                disabled>
+                                            <option value="-1">人民币</option>
+                                            <option value="0">文莱林吉特</option>
+                                            <option value="1">越南盾</option>
+                                            <option value="2">老挝基普</option>
+                                            <option value="3">柬埔寨瑞尔</option>
+                                            <option value="4" selected>泰铢</option>
+                                            <option value="5">缅元</option>
+                                            <option value="6">马来西亚林吉特</option>
+                                            <option value="7">菲律宾比索</option>
+                                            <option value="8">印尼卢比</option>
+                                            <option value="9">新加坡元</option>
+                                        </select>
+                                    </div>
+                                    <div style="float: right;width: 100px">
+                                        <button type="button" class="btn btn-danger">查询</button>
+                                    </div>
+                                </div>
+                                <div style="width: 770px;height:500px " id="echart_change">
+
+                                </div>
+                                <div style="height: 500px;overflow-y: auto">
+                                    <table id="table_change" class="table">
+                                        <thead>
+                                        <th>日期</th>
+                                        <th>从</th>
+                                        <th>到</th>
+                                        <th>汇率</th>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="right_content">
+                            <div class="right_h2" style="">实时汇率</div>
+                            <div class="right_text">
+                                <table cellspacing="0" cellpadding="0" width="100%" class="center table" >
+                                    <tbody>
+                                    <tr>
+                                        <th width="170">兑换币种</th>
+                                        <th width="80">代码</th>
+                                        <th>最新价</th>
+                                        <th>今日最高</th>
+                                        <th>今日最低</th>
+                                        <th>开盘价</th>
+                                        <th>昨收价</th>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="USDCNY.html" target="_blank">美元对人民币汇率</a></td>
+                                        <td><a href="USDCNY.html" target="_blank">USDCNY</a></td>
+                                        <td>6.9053</td>
+                                        <td>6.9167</td>
+                                        <td>6.8953</td>
+                                        <td>6.9057</td>
+                                        <td>6.9019</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="EURCNY.html" target="_blank">欧元对人民币汇率</a></td>
+                                        <td><a href="EURCNY.html" target="_blank">EURCNY</a></td>
+                                        <td>7.7086</td>
+                                        <td>7.7164</td>
+                                        <td>7.6678</td>
+                                        <td>7.6796</td>
+                                        <td>7.7086</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="GBPCNY.html" target="_blank">英镑对人民币汇率</a></td>
+                                        <td><a href="GBPCNY.html" target="_blank">GBPCNY</a></td>
+                                        <td>8.7177</td>
+                                        <td>8.7254</td>
+                                        <td>8.6764</td>
+                                        <td>8.6995</td>
+                                        <td>8.7177</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="JPYCNY.html" target="_blank">日元对人民币汇率</a></td>
+                                        <td><a href="JPYCNY.html" target="_blank">JPYCNY</a></td>
+                                        <td>0.0637</td>
+                                        <td>0.0637</td>
+                                        <td>0.0629</td>
+                                        <td>0.0629</td>
+                                        <td>0.0637</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="AUDCNY.html" target="_blank">澳大利亚元对人民币汇率</a></td>
+                                        <td><a href="AUDCNY.html" target="_blank">AUDCNY</a></td>
+                                        <td>4.7852</td>
+                                        <td>4.7937</td>
+                                        <td>4.7681</td>
+                                        <td>4.7689</td>
+                                        <td>4.7852</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="CHFCNY.html" target="_blank">瑞士法郎对人民币汇率</a></td>
+                                        <td><a href="CHFCNY.html" target="_blank">CHFCNY</a></td>
+                                        <td>6.8994</td>
+                                        <td>6.9025</td>
+                                        <td>6.8466</td>
+                                        <td>6.8468</td>
+                                        <td>6.8994</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="RUBCNY.html" target="_blank">俄罗斯卢布对人民币汇率</a></td>
+                                        <td><a href="RUBCNY.html" target="_blank">RUBCNY</a></td>
+                                        <td>0.1047</td>
+                                        <td>0.1047</td>
+                                        <td>0.1047</td>
+                                        <td>0.1047</td>
+                                        <td>0.1047</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="HKDCNY.html" target="_blank">港币对人民币汇率</a></td>
+                                        <td><a href="HKDCNY.html" target="_blank">HKDCNY</a></td>
+                                        <td>0.8803</td>
+                                        <td>0.8803</td>
+                                        <td>0.8803</td>
+                                        <td>0.8803</td>
+                                        <td>0.8803</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="KRWCNY.html" target="_blank">韩元对人民币汇率</a></td>
+                                        <td><a href="KRWCNY.html" target="_blank">KRWCNY</a></td>
+                                        <td>0.0058</td>
+                                        <td>0.0058</td>
+                                        <td>0.0058</td>
+                                        <td>0.0058</td>
+                                        <td>0.0058</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="MOPCNY.html" target="_blank">澳门元对人民币汇率</a></td>
+                                        <td><a href="MOPCNY.html" target="_blank">MOPCNY</a></td>
+                                        <td>0.855</td>
+                                        <td>0.8569</td>
+                                        <td>0.8542</td>
+                                        <td>0.8555</td>
+                                        <td>0.855</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="TWDCNY.html" target="_blank">台币对人民币汇率</a></td>
+                                        <td><a href="TWDCNY.html" target="_blank">TWDCNY</a></td>
+                                        <td>0.2182</td>
+                                        <td>0.2182</td>
+                                        <td>0.2182</td>
+                                        <td>0.2182</td>
+                                        <td>0.2182</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="ZARCNY.html" target="_blank">南非兰特对人民币汇率</a></td>
+                                        <td><a href="ZARCNY.html" target="_blank">ZARCNY</a></td>
+                                        <td>0.4733</td>
+                                        <td>0.4733</td>
+                                        <td>0.4733</td>
+                                        <td>0.4733</td>
+                                        <td>0.4733</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="SGDCNY.html" target="_blank">新加坡元对人民币汇率</a></td>
+                                        <td><a href="SGDCNY.html" target="_blank">SGDCNY</a></td>
+                                        <td>5.0203</td>
+                                        <td>5.0203</td>
+                                        <td>5.0203</td>
+                                        <td>5.0203</td>
+                                        <td>5.0203</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="THBCNY.html" target="_blank">泰铢对人民币汇率</a></td>
+                                        <td><a href="THBCNY.html" target="_blank">THBCNY</a></td>
+                                        <td>0.2185</td>
+                                        <td>0.2185</td>
+                                        <td>0.2185</td>
+                                        <td>0.2185</td>
+                                        <td>0.2185</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="SEKCNY.html" target="_blank">瑞典克朗对人民币汇率</a></td>
+                                        <td><a href="SEKCNY.html" target="_blank">SEKCNY</a></td>
+                                        <td>0.7218</td>
+                                        <td>0.7233</td>
+                                        <td>0.7168</td>
+                                        <td>0.7187</td>
+                                        <td>0.7218</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <nav aria-label="Page navigation" class="page_nav">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="area footerInner1">
+
+                    <div class="w850 fl">
+
+                        <div class="title_hezuohuoban" style="line-height: 50px">合作伙伴</div>
+                        <ul class="hezuohuoban">
+                            <!--<li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/ccb.jpg" width="120" height="35" alt="建设银行" ></li>
+                            <li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/icbc.jpg" width="120" height="35" alt="工商银行" ></li>
+                            <li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/abchina.jpg" width="120" height="35" alt="农业银行" ></li>
+                            <li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/alipay.jpg" width="120" height="35" alt="支付宝" ></li>
+                            <li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/xingyeyinhang.jpg" width="120" height="35" alt="兴业银行"></li>
+                            <li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/guangdayinhang.jpg" width="120" height="35" alt="光大银行" ></li>
+                            <li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/zhongguoyinlian.jpg" width="120" height="35" alt="中国银联"  ></li>
+                            <li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/yijifu.jpg" width="120" height="35" alt="易极付" ></li>
+                            <li><img border=0 src="http://www.xhforex.com/statics/images/hezuohuoban/xinlangcaijing.jpg" width="120" height="35" alt="新浪财经" ></li>-->
+
+                            <li><a title="工商银行" target="_blank" href="http://www.icbc.com.cn/"><img alt="工商银行"
+                                                                                                    border="0"
+                                                                                                    src="http://www.xhforex.com/statics/images/hezuohuoban/工商银行.jpg"></a>
+                            </li>
+                            <li><a title="光大银行" target="_blank" href="http://www.cebbank.com/"><img alt="光大银行"
+                                                                                                    border="0"
+                                                                                                    src="http://www.xhforex.com/statics/images/hezuohuoban/光大银行.jpg"></a>
+                            </li>
+                            <li><a title="广发银行" target="_blank" href="http://www.cgbchina.com.cn/"><img alt="广发银行"
+                                                                                                        border="0"
+                                                                                                        src="http://www.xhforex.com/statics/images/hezuohuoban/广发银行.jpg"></a>
+                            </li>
+                            <li><a title="建设银行" target="_blank" href="http://www.ccb.com/"><img alt="建设银行" border="0"
+                                                                                                src="http://www.xhforex.com/statics/images/hezuohuoban/建设银行.jpg"></a>
+                            </li>
+                            <li><a title="西联汇款" target="_blank" href="http://www.chinapay.com/"><img alt="西联汇款"
+                                                                                                     border="0"
+                                                                                                     src="http://www.xhforex.com/statics/images/hezuohuoban/西联汇款.jpg"></a>
+                            </li>
+                            <li><a title="兴业银行" target="_blank" href="http://www.cib.com.cn/"><img alt="兴业银行" border="0"
+                                                                                                   src="http://www.xhforex.com/statics/images/hezuohuoban/兴业银行.jpg"></a>
+                            </li>
+
+                            <li><a title="银联" target="_blank" href="http://online.unionpay.com/"><img alt="银联"
+                                                                                                      border="0"
+                                                                                                      src="http://www.xhforex.com/statics/images/hezuohuoban/银联.jpg"></a>
+                            </li>
+                            <li><a title="邮政储蓄" target="_blank" href="http://www.psbc.com/"><img alt="邮政储蓄" border="0"
+                                                                                                 src="http://www.xhforex.com/statics/images/hezuohuoban/邮政储蓄.jpg"></a>
+                            </li>
+                            <li><a title="招商银行" target="_blank" href="http://www.cmbchina.com/"><img alt="招商银行"
+                                                                                                     border="0"
+                                                                                                     src="http://www.xhforex.com/statics/images/hezuohuoban/招商银行.jpg"></a>
+                            </li>
+                            <li><a title="中国农业银行" target="_blank" href="http://www.abchina.com/"><img alt="中国农业银行"
+                                                                                                      border="0"
+                                                                                                      src="http://www.xhforex.com/statics/images/hezuohuoban/中国农业银行.jpg"></a>
+                            </li>
+                            <li><a title="中国银行" target="_blank" href="http://www.boc.cn/"><img alt="中国银行" border="0"
+                                                                                               src="http://www.xhforex.com/statics/images/hezuohuoban/中国银行.jpg"></a>
+                            </li>
+                            <li><a title="中信银行" target="_blank" href="http://bank.ecitic.com/"><img alt="中信银行"
+                                                                                                    border="0"
+                                                                                                    src="http://www.xhforex.com/statics/images/hezuohuoban/中信银行.jpg"></a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>
+                                Copyright &copy; 东盟小币种兑换平台
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="social-network">
+                            <li><a class="waves-effect waves-dark" href="#" data-placement="top" title="Facebook"><i
+                                    class="fa fa-facebook"></i></a></li>
+                            <li><a class="waves-effect waves-dark" href="#" data-placement="top" title="Twitter"><i
+                                    class="fa fa-twitter"></i></a></li>
+                            <li><a class="waves-effect waves-dark" href="#" data-placement="top" title="Linkedin"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                            <li><a class="waves-effect waves-dark" href="#" data-placement="top" title="Pinterest"><i
+                                    class="fa fa-pinterest"></i></a></li>
+                            <li><a class="waves-effect waves-dark" href="#" data-placement="top" title="Google plus"><i
+                                    class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<a href="#" class="scrollup waves-effect waves-dark"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<!-- Vendor Scripts -->
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/echarts.min.js"></script>
+<script>
+    function showWindowHref() {
+        var sHref = window.location.href;
+        var args = sHref.split('?');
+        if (args[0] == sHref) {
+            return "";
+        }
+        var arr = args[1].split('&');
+        var obj = {};
+        for (var i = 0; i < arr.length; i++) {
+            var arg = arr[i].split('=');
+            obj[arg[0]] = arg[1];
+        }
+        return obj;
+    }
+
+    var href = showWindowHref(); // obj
+
+    $('.panel').removeClass('active');
+    $('.panel').eq(parseInt(href.t)).addClass('active');
+
+    $('.right_content').eq(parseInt(href.t)).css('display', 'block');
+
+    $('.panel').bind('click', function () {
+
+        var p_index = parseInt($(this).attr('href'));
+        $('.panel').removeClass('active');
+        $(this).addClass('active');
+        $('.right_content').css('display', 'none');
+        $('.right_content').eq(p_index).css('display', 'block');
+    });
+
+    var data = [
+        {"日期": "2018/12/3 星期一", "比率": "4.44673", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/4 星期二", "比率": "4.49937", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/5 星期三", "比率": "4.48059", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/6 星期四", "比率": "4.48196", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/7 星期五", "比率": "4.50017", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/9 星期日", "比率": "4.50068", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/10 星期一", "比率": "4.46483", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/11 星期二", "比率": "4.46438", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/12 星期三", "比率": "4.46308", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/13 星期四", "比率": "4.47041", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/14 星期五", "比率": "4.46696", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/16 星期日", "比率": "4.46758", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/17 星期一", "比率": "4.45674", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/18 星期二", "比率": "4.4549", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/19 星期三", "比率": "4.46976", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/20 星期四", "比率": "4.45971", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/21 星期五", "比率": "4.4612", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/24 星期一", "比率": "4.46522", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/25 星期二", "比率": "4.46567", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/26 星期三", "比率": "4.46739", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/27 星期四", "比率": "4.48189", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/28 星期五", "比率": "4.44419", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/30 星期日", "比率": "4.44995", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2018/12/31 星期一", "比率": "4.44559", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/1 星期二", "比率": "4.44283", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/2 星期三", "比率": "4.48463", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/3 星期四", "比率": "4.4936", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/4 星期五", "比率": "4.48336", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/7 星期一", "比率": "4.49832", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/8 星期二", "比率": "4.49659", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/9 星期三", "比率": "4.50836", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/10 星期四", "比率": "4.53488", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/11 星期五", "比率": "4.55395", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/13 星期日", "比率": "4.55664", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/14 星期一", "比率": "4.55416", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/15 星期二", "比率": "4.5619", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/16 星期三", "比率": "4.55524", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/17 星期四", "比率": "4.55093", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/18 星期五", "比率": "4.55376", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/20 星期日", "比率": "4.55353", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/21 星期一", "比率": "4.54525", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/22 星期二", "比率": "4.53767", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/23 星期三", "比率": "4.54468", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/24 星期四", "比率": "4.54807", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/25 星期五", "比率": "4.55243", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/27 星期日", "比率": "4.5546", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/28 星期一", "比率": "4.56413", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/29 星期二", "比率": "4.57411", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/30 星期三", "比率": "4.57619", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/1/31 星期四", "比率": "4.58154", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/1 星期五", "比率": "4.56286", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/4 星期一", "比率": "4.56411", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/5 星期二", "比率": "4.55803", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/6 星期三", "比率": "4.56678", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/7 星期四", "比率": "4.56974", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/8 星期五", "比率": "4.57122", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/10 星期日", "比率": "4.57171", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/11 星期一", "比率": "4.54744", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/12 星期二", "比率": "4.54767", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/13 星期三", "比率": "4.56267", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/14 星期四", "比率": "4.55332", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/15 星期五", "比率": "4.55139", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/17 星期日", "比率": "4.55146", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/18 星期一", "比率": "4.55658", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/19 星期二", "比率": "4.55604", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/20 星期三", "比率": "4.58286", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/21 星期四", "比率": "4.58385", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/22 星期五", "比率": "4.58148", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/24 星期日", "比率": "4.57869", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/25 星期一", "比率": "4.59697", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/26 星期二", "比率": "4.59225", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/27 星期三", "比率": "4.60462", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/2/28 星期四", "比率": "4.60537", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/1 星期五", "比率": "4.59993", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/3 星期日", "比率": "4.60075", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/4 星期一", "比率": "4.59856", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/5 星期二", "比率": "4.59865", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/6 星期三", "比率": "4.59569", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/7 星期四", "比率": "4.60485", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/8 星期五", "比率": "4.59801", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/10 星期日", "比率": "4.59876", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/11 星期一", "比率": "4.59577", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/12 星期二", "比率": "4.60573", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/13 星期三", "比率": "4.60877", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/14 星期四", "比率": "4.60025", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/15 星期五", "比率": "4.59716", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/17 星期日", "比率": "4.59708", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/18 星期一", "比率": "4.58484", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/19 星期二", "比率": "4.58961", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/20 星期三", "比率": "4.59467", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/21 星期四", "比率": "4.59931", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/22 星期五", "比率": "4.59669", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/24 星期日", "比率": "4.59691", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/25 星期一", "比率": "4.59654", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/26 星期二", "比率": "4.59416", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/27 星期三", "比率": "4.59009", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/28 星期四", "比率": "4.58006", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/29 星期五", "比率": "4.59692", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/3/31 星期日", "比率": "4.59708", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/1 星期一", "比率": "4.58944", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/2 星期二", "比率": "4.58748", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/3 星期三", "比率": "4.58965", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/4 星期四", "比率": "4.58622", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/5 星期五", "比率": "4.58536", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/7 星期日", "比率": "4.5854", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/8 星期一", "比率": "4.59041", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/9 星期二", "比率": "4.5937", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/10 星期三", "比率": "4.59068", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/11 星期四", "比率": "4.5932", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/12 星期五", "比率": "4.60085", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/14 星期日", "比率": "4.60093", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/15 星期一", "比率": "4.60253", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/16 星期二", "比率": "4.59849", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/17 星期三", "比率": "4.60184", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/18 星期四", "比率": "4.596", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/19 星期五", "比率": "4.59713", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/21 星期日", "比率": "4.59847", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/22 星期一", "比率": "4.59921", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/23 星期二", "比率": "4.58972", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/24 星期三", "比率": "4.59989", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/25 星期四", "比率": "4.58691", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/26 星期五", "比率": "4.59411", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/28 星期日", "比率": "4.59975", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/29 星期一", "比率": "4.59011", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/4/30 星期二", "比率": "4.58841", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/1 星期三", "比率": "4.59317", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/2 星期四", "比率": "4.5907", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/3 星期五", "比率": "4.58409", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/5 星期日", "比率": "4.58312", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/6 星期一", "比率": "4.571", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/7 星期二", "比率": "4.56551", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/8 星期三", "比率": "4.56486", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/9 星期四", "比率": "4.54119", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/10 星期五", "比率": "4.53584", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/12 星期日", "比率": "4.53613", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/13 星期一", "比率": "4.5251", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/14 星期二", "比率": "4.53206", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/15 星期三", "比率": "4.5216", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/16 星期四", "比率": "4.53587", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/17 星期五", "比率": "4.53531", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/19 星期日", "比率": "4.53607", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/20 星期一", "比率": "4.54393", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/21 星期二", "比率": "4.55747", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/22 星期三", "比率": "4.55396", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/23 星期四", "比率": "4.56291", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/24 星期五", "比率": "4.56335", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/26 星期日", "比率": "4.56324", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/27 星期一", "比率": "4.55641", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/28 星期二", "比率": "4.56542", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/29 星期三", "比率": "4.57234", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/30 星期四", "比率": "4.57555", "ISO代码从": "CNY", "ISO代码到": "TWD"},
+        {"日期": "2019/5/31 星期五", "比率": "4.56432", "ISO代码从": "CNY", "ISO代码到": "TWD"}
+
+    ]
+
+    var echart_change = echarts.init(document.getElementById('echart_change'));
+
+    var xAxis = [];
+    var setData = [];
+    var html = '';
+    data.map(function (item) {
+        xAxis.push(item['日期']);
+        setData.push(item['比率'].split(' ')[0].replace(',', ''));
+        html += '<tr><td>' + item['日期'] + '</td><td>' + item['ISO代码从'] + '</td><td>' + item['ISO代码到'] + '</td><td>' + item['比率'].split(' ')[0].replace(',', '') + '</td></tr>'
+    });
+
+    $('#table_change').append(html);
+    var option = {
+        title: {
+            text: '复数人民币(CNY)到1单数泰国泰铢(THB)'
+        },
+        grid: {
+            left: 40
+        },
+        xAxis: {
+            type: 'category',
+            data: xAxis.reverse()
+        },
+        yAxis: {
+            type: 'value',
+            min: 4
+        },
+        series: [{
+            data: setData.reverse(),
+            type: 'line'
+        }]
+    };
+    echart_change.setOption(option);
+
+
+    console.log(href['t']); // xiaoming
+</script>
+</body>
+</html>
